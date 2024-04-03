@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  supabase:
+    image: supabase/supabase
+    ports:
+      - "5432:5432" # Puerto para PostgreSQL
+      - "5433:5433" # Puerto para Supabase
+    environment:
+      SUPABASE_URL: "https://yrjckqyqybppxxcwpbgy.supabase.co"
+      SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlyamNrcXlxeWJwcHh4Y3dwYmd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAxOTUyNjEsImV4cCI6MjAyNTc3MTI2MX0.hEJVah2DheT04Lw5F1AqZf6iVwdtOWbyZwCzf6hhSLE"

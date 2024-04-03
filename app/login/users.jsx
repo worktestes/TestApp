@@ -1,5 +1,6 @@
 "use client";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -55,6 +56,7 @@ const handleLogout = async() => {
     setUser(null)
 }
 
+
     console.log(loading, user);
 if (loading) {
     <div className="flex items-center justify-center min-h-screen">
@@ -63,13 +65,20 @@ if (loading) {
 }
 if (user) {
     return(
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center min-h-screen bg-black-100">
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h1 className="text-2xl font-bold mb-4 text-center text-gray-800">You are already logged in</h1>
           <div className="flex justify-center">
             <button onClick={handleLogout} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Logout
             </button>
+            
+            <Link href="../menus">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              continue
+            </button>
+            </Link>
+          
           </div>
         </div>
       </div>

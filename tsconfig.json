@@ -115,7 +115,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/crear-receta/RecetaForm.jsx", "app/login/page.tsx", "app/mis-recetas/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
